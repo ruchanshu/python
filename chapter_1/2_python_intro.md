@@ -34,6 +34,8 @@ Despite Python's growing popularity, there are still some niches where Python is
 - **low-level programming** (sometimes called "close to metal" programming): if you want to implement an extremely effective driver or graphical engine, you wouldn't use Python;
 - **applications for mobile devices**: although this territory is still waiting to be conquered by Python, it will most likely happen someday.
 
+## Versions of Python
+
 **Python aka CPython**
 
 <img src="images/python_software_foundation.png" width=25% height=25%>
