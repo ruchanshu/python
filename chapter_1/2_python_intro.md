@@ -36,7 +36,7 @@ Despite Python's growing popularity, there are still some niches where Python is
 
 **Python aka CPython**
 
-<img src="images/python_software_foundation.png" width=20% height=20%>
+<img src="images/python_software_foundation.png" width=25% height=25%>
 
 The Pythons which are maintained by the people gathered around the PSF ([Python Software Foundation](https://www.python.org/psf-landing/)), a community that aims to develop, improve, expand, and popularize Python and its environment. The PSF's president is Guido von Rossum himself, and for this reason, these Pythons are called **canonical**. They are also considered to be **reference Pythons**, as any other implementation of the language should follow all standards established by the PSF.
 

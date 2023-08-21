@@ -29,7 +29,7 @@ There are two different ways of **transforming a program from a high-level progr
 
 **INTERPRETATION** - you can translate the source program each time it has to be run; the program performing this kind of transformation is called an interpreter, as it interprets the code every time it is intended to be executed; it also means that you cannot just distribute the source code as-is, because the end-user also needs the interpreter to execute it.
 
-![Advantages and Disadvantages](/images/compilation_vs_interpretation.png)
+![Advantages and Disadvantages](images/compilation_vs_interpretation.png)
 
 **What does this all mean for you?**
 
