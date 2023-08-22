@@ -202,3 +202,39 @@ Python precisely defines the priorities of all operators, and assumes that opera
 
 So, if you know that `*` has a higher priority than `+`, the computation of the final result should be obvious.
 
+### List of priorities
+Look at the table below:
+
+| Priority | Operator |       |
+|----------| --- |-------|
+| 1 | `**` |       |
+| 2 | `+`, `-` (note: unary operators located next to the right of the power operator bind more strongly) | unary |
+| 3 | `*`, `/`, `//`, `%` |       |
+| 4 | `+`, `-` | unary |
+
+> Note: we've enumerated the operators in order **from the highest (1) to the lowest (4) priorities**.
+
+Try to work through the following expression:
+```python
+print(2 * 3 % 5)
+```
+
+Both operators (`*` and `%`) have the same priority, so the result can be guessed only when you know the binding direction.
+
+The result should be `1`
+
+## Operators and parentheses
+Of course, you're always allowed to use **parentheses**, which can change the natural order of a calculation.
+
+In accordance with the arithmetic rules, **subexpressions in parentheses are always calculated first**.
+
+You can use as many parentheses as you need, and they're often used to **improve the readability** of an expression, even if they don't change the order of the operations.
+
+An example of an expression with multiple parentheses is here:
+```python
+print((5 * ((25 % 13) + 100) / (2 * 13)) // 2)
+```
+
+Try to compute the value that's printed to the console. What's the result of the `print()` function?
+
+The result is `10.0`
