@@ -1,4 +1,4 @@
-# Introduction to Python and computer programming
+# Introduction to computer programming
 
 ## What makes a language?
 

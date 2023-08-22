@@ -1,4 +1,4 @@
-# Introduction to Python and computer programming
+# Introduction to Python
 
 ## What is Python?
 
@@ -36,8 +36,7 @@ Despite Python's growing popularity, there are still some niches where Python is
 
 ## Versions of Python
 
-**Python aka CPython**
-
+### Python aka CPython
 <img src="images/python_software_foundation.png" width=25% height=25%>
 
 The Pythons which are maintained by the people gathered around the PSF ([Python Software Foundation](https://www.python.org/psf-landing/)), a community that aims to develop, improve, expand, and popularize Python and its environment. The PSF's president is Guido von Rossum himself, and for this reason, these Pythons are called **canonical**. They are also considered to be **reference Pythons**, as any other implementation of the language should follow all standards established by the PSF.
@@ -47,8 +46,7 @@ Guido van Rossum used the "C" programming language to implement the very first v
 
 > This is why the PSF implementation is often referred to as **CPython**. This is the most influential Python among all the Pythons in the world.
 
-**Cython**
-
+### Cython
 ![Cython](images/cython.png)
 
 Another Python family member is **Cython**.
@@ -59,8 +57,7 @@ How are these two contradictions reconciled? One solution is to write your mathe
 
 This is what Cython is intended to do – to automatically translate the Python code (clean and clear, but not too swift) into "C" code (complicated and talkative, but agile).
 
-**PyPy and RPython**
-
+### PyPy and RPython
 ![PyPy](images/pypy.png)
 
 It's a logo of the **PyPy** - a Python within a Python. In other words, it represents a Python environment written in Python-like language named **RPython** (Restricted Python). It is actually a subset of Python.
@@ -71,8 +68,7 @@ This is useful because if you want to test any new feature that may be (but does
 > In addition, PyPy is compatible with the Python 3 language.
 
 
-**Jython**
-
+### Jython
 ![Jython](images/jython.png)
 
 Another version of Python is called **Jython**.
