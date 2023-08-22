@@ -105,7 +105,7 @@ Note: some of the values are negative. This will obviously affect the result. Bu
 The result is two negative twos. The real (not rounded) result is `-1.5` in both cases. However, the results are the subjects of rounding. The **rounding goes toward the lesser integer value**, and the lesser integer value is `-2`, hence: `-2` and `-2.0`.
 
 > [!NOTE]
-> Integer division can also be called **floor division**. You will definitely come across this term in the future.
+> Integer division can also be called **floor division**.
 
 ### remainder (modulo)
 Its graphical representation in Python is the `%` (percent) sign, which may look a bit confusing.
