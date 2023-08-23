@@ -15,7 +15,7 @@ If you want to give a name to a variable, you must follow some strict rules:
 - the name of the variable must not be any of Python's reserved words (the keywords - we'll explain more about this soon).
 
 <p align="center">
-  <img width="50%" height="50%" src="images/box.png">
+  <img width="25%" height="25%" src="images/box.png">
 </p>
 
 ### Correct and incorrect variable names
