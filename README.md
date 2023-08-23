@@ -8,3 +8,6 @@ All study material of python
 5. [Operators](chapter_2/2_operators.md)
 6. [Variables](chapter_2/3_variables.md)
 7. [Comments](chapter_2/4_comments.md)
+8. [Input Function](chapter_2/5_input_function.md)
+9. [Type Casting](chapter_2/6_type_casting.md)
+10. [String Operators](chapter_2/7_string_operators.md)
