@@ -6,3 +6,4 @@ All study material of python
 3. [Print Statement](chapter_1/3_print_function.md)
 4. [Python Literals](chapter_2/1_data_types.md)
 5. [Operators](chapter_2/2_operators.md)
+6. [Variables](chapter_2/3_variables.md)
