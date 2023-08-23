@@ -22,3 +22,11 @@ Just like this:
 anything = float(input("Enter a number: "))
 print(anything, "to the power of 2 is", anything ** 2.0)
 ```
+
+### Type conversion: str()
+You can also convert a **number into a string**, which is way easier and safer ‒ this kind of operation is always possible.
+
+A function capable of doing that is called `str()`:
+```python
+str(number)
+```

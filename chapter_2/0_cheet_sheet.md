@@ -60,3 +60,25 @@
 3. Whenever possible and justified, you should give **self-commenting names** to variables, e.g., if you're using two variables to store a length and width of something, the variable names `length` and `width` may be a better choice than `myvar1` and `myvar2`.
 4. It's important to use comments to make programs easier to understand, and to use readable and meaningful variable names in code. However, it's equally important **not to use** variable names that are confusing, or leave comments that contain wrong or incorrect information!
 5. Comments can be important when you are reading your own code after some time (trust us, developers do forget what their own code does), and when others are reading your code (can help them understand what your programs do and how they do it more quickly).
+
+### The `input()` function 
+1. The `print()` function **sends data to the console**, while the `input()` function **gets data from the console**.
+2. The `input()` function comes with an optional parameter: **the prompt string**. It allows you to write a message before the user input, e.g.:
+   ```python
+   name = input("Enter your name: ")
+   print("Hello, " + name + ". Nice to meet you!")
+   ```
+3. When the `input()` function is called, the program's flow is stopped, the prompt symbol keeps blinking (it prompts the user to take action when the console is switched to input mode) until the user has entered an input and/or pressed the _Enter_ key.
+4. The result of the `input()` function is a string. You can add strings to each other using the concatenation (`+`) operator. Check out this code:
+   ```python
+   num_1 = input("Enter the first number: ") # Enter 12
+   num_2 = input("Enter the second number: ") # Enter 21
+   
+   print(num_1 + num_2) # the program returns 1221
+   ```
+
+5. You can also multiply (`*` ‒ replication) strings, e.g.:
+   ```python
+   my_input = input("Enter something: ") # Example input: hello
+   print(my_input * 3) # Expected output: hellohellohello
+   ```
