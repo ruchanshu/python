@@ -7,3 +7,4 @@ All study material of python
 4. [Python Literals](chapter_2/1_data_types.md)
 5. [Operators](chapter_2/2_operators.md)
 6. [Variables](chapter_2/3_variables.md)
+7. [Comments](chapter_2/4_comments.md)
