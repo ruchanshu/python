@@ -210,7 +210,7 @@ Look at the table below:
 | 1 | `**` |       |
 | 2 | `+`, `-` (note: unary operators located next to the right of the power operator bind more strongly) | unary |
 | 3 | `*`, `/`, `//`, `%` |       |
-| 4 | `+`, `-` | unary |
+| 4 | `+`, `-` | binary |
 
 > Note: we've enumerated the operators in order **from the highest (1) to the lowest (4) priorities**.
 
