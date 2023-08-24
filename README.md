@@ -13,3 +13,4 @@ All study material of python
 10. [String Operators](chapter_2/7_string_operators.md)
 11. [Comparison Operators](chapter_3/1_comparison_operators.md)
 12. [Conditional Statements](chapter_3/2_if_else.md)
+13. [Loops](chapter_3/3_loops.md)

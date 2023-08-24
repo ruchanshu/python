@@ -101,16 +101,96 @@
   ```
 
 
-### Operators
-1. An **expression** is a combination of values (or variables, operators, calls to functions ‒ you will learn about them soon) which evaluates to a certain value, e.g., `1 + 2`.
-2. **Operators** are special symbols or keywords which are able to operate on the values and perform (mathematical) operations, e.g., the `*` operator multiplies two values: `x * y`.
-3. Arithmetic operators in Python: `+` (addition), `-` (subtraction), `*` (multiplication), `/` (classic division ‒ always returns a float), `%` (modulus ‒ divides left operand by right operand and returns the remainder of the operation, e.g., `5 % 2 = 1`), `**` (exponentiation ‒ left operand raised to the power of right operand, e.g., `2 ** 3 = 2 * 2 * 2 = 8`), `//` (floor/integer division ‒ returns a number resulting from division, but rounded down to the nearest whole number, e.g., `3 // 2.0 = 1.0`)
-4. A **unary** operator is an operator with only one operand, e.g., `-1`, or `+3`.
-5. A **binary** operator is an operator with two operands, e.g., `4 + 5`, or `12 % 5`.
-6. Some operators act before others – the hierarchy of priorities:
-   - the `**` operator (exponentiation) has **the highest priority**;
-   - then the unary `+` and `-` (note: a unary operator to the right of the exponentiation operator binds more strongly, for example: `4 ** -1` equals `0.25`)
-   - then `*`, `/`, `//`, and `%`;
-   - and, finally, the lowest priority: the binary `+` and `-`.
-7. Subexpressions in **parentheses** are always calculated first, e.g., `15 - 1 * (5 * (1 + 2)) = 0`.
-8. The **exponentiation** operator uses **right-sided binding**, e.g., `2 ** 2 ** 3 = 256`.
+### Loops
+1. There are two types of loops in Python: `while` and `for`:
+- the `while` loop executes a statement or a set of statements as long as a specified boolean condition is true, e.g.:
+    ```python
+    # Example 1
+    while True:
+        print("Stuck in an infinite loop.")
+    
+    # Example 2
+    counter = 5
+    while counter > 2:
+        print(counter)
+        counter -= 1
+    ```
+- the `for` loop executes a set of statements many times; it's used to iterate over a sequence (e.g., a list, a dictionary, a tuple, or a set - you will learn about them soon) or other objects that are iterable (e.g., strings). You can use the `for` loop to iterate over a sequence of numbers using the built-in `range` function. Look at the examples below:
+    ```python
+    # Example 1
+    word = "Python"
+    for letter in word:
+        print(letter, end="*")
+    
+    # Example 2
+    for i in range(1, 10):
+        if i % 2 == 0:
+            print(i)
+    ```
+2. You can use the `break` and `continue` statements to change the flow of a loop:
+- You use `break` to exit a loop, e.g.:
+    ```python
+    text = "OpenEDG Python Institute"
+    for letter in text:
+        if letter == "P":
+            break
+        print(letter, end="")
+    ```
+- You use `continue` to skip the current iteration, and continue with the next iteration, e.g.:
+    ```python
+    text = "pyxpyxpyx"
+    for letter in text:
+        if letter == "x":
+            continue
+        print(letter, end="")
+    ```
+3. The `while` and `for` loops can also have an `else` clause in Python. The `else` clause executes after the loop finishes its execution as long as it has not been terminated by `break`, e.g.:
+    ```python
+    n = 0
+    
+    while n != 3:
+        print(n)
+        n += 1
+    else:
+        print(n, "else")
+    
+    print()
+    
+    for i in range(0, 3):
+        print(i)
+    else:
+        print(i, "else")
+    ```
+
+4. The `range()` function generates a sequence of numbers. It accepts integers and returns range objects. The syntax of `range()` looks as follows: `range(start, stop, step)`, where:
+- `start` is an optional parameter specifying the starting number of the sequence (0 by default)
+- `stop` is an optional parameter specifying the end of the sequence generated (it is not included),
+- and `step` is an optional parameter specifying the difference between the numbers in the sequence (1 by default.)
+
+    Example code:
+    ```python
+    for i in range(3):
+        print(i, end=" ")  # Outputs: 0 1 2
+    
+    for i in range(6, 1, -2):
+        print(i, end=" ")  # Outputs: 6, 4, 2
+    ```
+
+### Computer logic
+1. Python supports the following logical operators:
+- `and` → if both operands are true, the condition is true, e.g., `(True and True)` is `True`,
+- `or` → if any of the operands are true, the condition is true, e.g., `(True or False)` is `True`,
+- `not` → returns false if the result is true, and returns true if the result is false, e.g., `not True` is `False`.
+2. You can use bitwise operators to manipulate single bits of data. The following sample data:
+- `x = 15`, which is 0000 1111 in binary,
+- `y = 16`, which is 0001 0000 in binary.
+
+will be used to illustrate the meaning of bitwise operators in Python. Analyze the examples below:
+
+- `&` does a bitwise and, e.g., `x & y = 0`, which is `0000 0000` in binary,
+- `|` does a bitwise or, e.g., `x | y = 31`, which is `0001 1111` in binary,
+- `˜`  does a bitwise not, e.g., `˜x = 240`, which is `1111 0000` in binary,
+  - `-16` (decimal from signed 2's complement) -- read more about the [Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) operation.
+- `^` does a bitwise xor, e.g., `x ^ y = 31`, which is `0001 1111` in binary,
+- `>>` does a bitwise right shift, e.g., `y >> 1 = 8`, which is `0000 1000` in binary,
+- `<<` does a bitwise left shift, e.g., `y << 3 = 128`, which is `1000 0000` in binary,
