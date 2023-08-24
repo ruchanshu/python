@@ -11,3 +11,5 @@ All study material of python
 8. [Input Function](chapter_2/5_input_function.md)
 9. [Type Casting](chapter_2/6_type_casting.md)
 10. [String Operators](chapter_2/7_string_operators.md)
+11. [Comparison Operators](chapter_3/1_comparison_operators.md)
+12. [Conditional Statements](chapter_3/2_if_else.md)
