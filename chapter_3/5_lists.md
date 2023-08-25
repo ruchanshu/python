@@ -332,3 +332,21 @@ Note:
 - we've swapped the i<sup>th</sup> element (from the beginning of the list) with the one with an index equal to `(length - i - 1)` (from the end of the list); in our example, for `i` equal to `0` the `(length - i - 1)` gives `4`; for `i` equal to `1`, it gives `3` ‒ this is exactly what we needed.
 
 Lists are extremely useful, and you'll encounter them very often.
+
+## Sorting a list
+Python, however, has its own sorting mechanisms. No one needs to write their own sorts, as there is a sufficient number of **ready-to-use tools**.
+
+If you want Python to sort your list, you can do it like this:
+```python
+my_list = [8, 10, 6, 2, 4]
+my_list.sort()
+print(my_list)
+```
+It is as simple as that.
+
+The snippet's output is as follows:
+```
+[2, 4, 6, 8, 10]
+```
+
+As you can see, all the lists have a method named `sort()`, which sorts them as fast as possible. You've already learned about some of the list methods before, and you're going to learn more about others very soon

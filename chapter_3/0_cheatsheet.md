@@ -241,3 +241,19 @@ will be used to illustrate the meaning of bitwise operators in Python. Analyze t
     print(len(my_list))  # outputs 4
     ```
 7. A typical **function** invocation looks as follows: `result = function(arg)`, while a typical **method** invocation looks like this: **result = data.method(arg)**.
+8. You can use the `sort()` method to sort elements of a list, e.g.:
+    ```python
+    lst = [5, 3, 1, 2, 4]
+    print(lst)
+    
+    lst.sort()
+    print(lst)  # outputs: [1, 2, 3, 4, 5]
+    ```
+9. There is also a list method called `reverse()`, which you can use to reverse the list, e.g.:
+    ```python
+    lst = [5, 3, 1, 2, 4]
+    print(lst)
+    
+    lst.reverse()
+    print(lst)  # outputs: [4, 2, 1, 3, 5]
+    ```
