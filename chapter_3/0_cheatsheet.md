@@ -182,8 +182,8 @@
 - `or` → if any of the operands are true, the condition is true, e.g., `(True or False)` is `True`,
 - `not` → returns false if the result is true, and returns true if the result is false, e.g., `not True` is `False`.
 2. You can use bitwise operators to manipulate single bits of data. The following sample data:
-- `x = 15`, which is 0000 1111 in binary,
-- `y = 16`, which is 0001 0000 in binary.
+- `x = 15`, which is `0000 1111` in binary,
+- `y = 16`, which is `0001 0000` in binary.
 
 will be used to illustrate the meaning of bitwise operators in Python. Analyze the examples below:
 
