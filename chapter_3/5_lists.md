@@ -350,3 +350,192 @@ The snippet's output is as follows:
 ```
 
 As you can see, all the lists have a method named `sort()`, which sorts them as fast as possible. You've already learned about some of the list methods before, and you're going to learn more about others very soon
+
+## The inner life of lists
+```python
+list_1 = [1]
+list_2 = list_1
+list_1[0] = 2
+print(list_2)
+```
+The program:
+- creates a one-element list named `list_1`;
+- assigns it to a new list named `list_2`;
+- changes the only element of `list_1`;
+- prints out `list_2`.
+The surprising part is the fact that the program will output: `[2]`, not `[1]`, which seems to be the obvious solution.
+
+
+Lists (and many other complex Python entities) are stored in different ways than ordinary (scalar) variables.
+
+You could say that:
+- the name of an ordinary variable is the **name of its content**;
+- the name of a list is the name of a **memory location where the list is stored**.
+
+Read these two lines once more - the difference is essential for understanding what we are going to talk about next.
+
+The assignment: `list_2 = list_1` copies the name of the array, not its contents. In effect, the two names (`list_1` and `list_2`) identify the same location in the computer memory. Modifying one of them affects the other, and vice versa.
+
+How do you cope with that?
+
+### Powerful slices
+Fortunately, the solution is at your fingertips - its name is the **slice**.
+
+A slice is an element of Python syntax that allows you to **make a brand new copy of a list, or parts of a list**.
+
+It actually copies the list's contents, not the list's name.
+
+This is exactly what you need. Take a look at the snippet below:
+```python
+list_1 = [1]
+list_2 = list_1[:]
+list_1[0] = 2
+print(list_2)
+```
+Its output is `[1]`.
+
+This inconspicuous part of the code described as `[:]` is able to produce a brand new list.
+
+One of the most general forms of the slice looks as follows:
+```python
+my_list[start:end]
+```
+As you can see, it resembles indexing, but the colon inside makes a big difference.
+
+A slice of this form **makes a new (target) list, taking elements from the source list - the elements of the indices from start to `end - 1`**.
+
+> [!NOTE]
+> Not to end `but` to `end - 1`. An element with an index equal to `end` is the first element which **does not take part in the slicing**.
+
+Using negative values for both start and end is possible (just like in indexing).
+
+Take a look at the snippet:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:3]
+print(new_list)
+```
+The `new_list` list will have `end - start` (3 - 1 = 2) elements - the ones with indices equal to `1` and `2` (but not `3`).
+
+The snippet's output is: `[8, 6]`
+
+### Slices - negative indices
+Look at the snippet below:
+```python
+my_list[start:end]
+```
+To repeat:
+- `start` is the index of the first element **included in the slice**;
+- `end` is the index of the first element **not included in the slice**.
+
+This is how **negative indices** work with the slice:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[1:-1]
+print(new_list)
+```
+The snippet's output is:
+```
+[8, 6, 4]
+```
+If the `start` specifies an element lying further than the one described by the `end` (from the list's beginning point of view), the slice will be **empty**:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[-1:1]
+print(new_list)
+```
+The snippet's output is: `[]`
+
+If you omit the `start` in your slice, it is assumed that you want to get a slice beginning at the element with index `0`.
+
+In other words, the slice of this form:
+```python
+my_list[:end]
+```
+is a more compact equivalent of:
+```python
+my_list[0:end]
+```
+Look at the snippet below:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[:3]
+print(new_list)
+```
+This is why its output is: `[10, 8, 6]`.
+
+Similarly, if you omit the `end` in your slice, it is assumed that you want the slice to end at the element with the index `len(my_list)`.
+
+In other words, the slice of this form:
+```python
+my_list[start:]
+```
+is a more compact equivalent of:
+```python
+my_list[start:len(my_list)]
+```
+Look at the following snippet:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[3:]
+print(new_list)
+```
+Its output is therefore: `[4, 2]`.
+
+As we've said before, omitting both `start` and `end` makes a **copy of the whole list**:
+```python
+my_list = [10, 8, 6, 4, 2]
+new_list = my_list[:]
+print(new_list)
+```
+The snippet's output is: `[10, 8, 6, 4, 2]`.
+
+The previously described `del` instruction is able to **delete more than just a list's element at once - it can delete slices too**:
+```python
+my_list = [10, 8, 6, 4, 2]
+del my_list[1:3]
+print(my_list)
+```
+> [!NOTE]
+> In this case, the slice doesn't produce any new list!
+
+The snippet's output is: `[10, 4, 2]`.
+
+Deleting all the elements at once is possible too:
+```python
+my_list = [10, 8, 6, 4, 2]
+del my_list[:]
+print(my_list)
+```
+The list becomes empty, and the output is: `[]`.
+
+Removing the slice from the code changes its meaning dramatically.
+
+Take a look:
+```python
+my_list = [10, 8, 6, 4, 2]
+del my_list
+print(my_list)
+```
+The `del` instruction will **delete the list itself, not its content**.
+
+The `print()` function invocation from the last line of the code will then cause a runtime error.
+
+## The in and not in operators
+Python offers two very powerful operators, able to **look through the list in order to check whether a specific value is stored inside the list or not**.
+
+These operators are:
+```python
+elem in my_list
+elem not in my_list
+```
+The first of them (`in`) checks if a given element (its left argument) is currently stored somewhere inside the list (the right argument) - the operator returns `True` in this case.
+
+The second (`not in`) checks if a given element (its left argument) is absent in a list - the operator returns `True` in this case.
+```python
+my_list = [0, 3, 12, 8, 2]
+
+print(5 in my_list)
+print(5 not in my_list)
+print(12 in my_list)
+```
