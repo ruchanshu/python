@@ -14,3 +14,4 @@ All study material of python
 11. [Comparison Operators](chapter_3/1_comparison_operators.md)
 12. [Conditional Statements](chapter_3/2_if_else.md)
 13. [Loops](chapter_3/3_loops.md)
+14. [Computer logic](chapter_3/4_logical_n_bitwise_operator.md)
