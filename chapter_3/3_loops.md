@@ -13,7 +13,7 @@ If you notice some similarities to the _if_ instruction, that's quite all right.
 The semantic difference is more important: when the condition is met, if performs its statements **only once**; _while_ **repeats the execution as long as the condition evaluates to `True`**.
 
 > [!NOTE]
-> All the rules regarding indentation are applicable here, too. We'll show you this soon.
+> All the rules regarding indentation are applicable here, too.
 
 Look at the algorithm below:
 ```python
