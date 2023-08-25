@@ -307,3 +307,61 @@ will be used to illustrate the meaning of bitwise operators in Python. Analyze t
     print("C" not in my_list)  # outputs: True
     print(2 not in my_list)  # outputs: False
     ```
+   
+### Lists in lists
+1. **List comprehension** allows you to create new lists from existing ones in a concise and elegant way. The syntax of a list comprehension looks as follows:
+    ```python
+    [expression for element in list if conditional]
+    ```
+    which is actually an equivalent of the following code:
+    ```python
+    for element in list:
+        if conditional:
+            expression
+    ```
+    Here's an example of a list comprehension ‒ the code creates a five-element list filled with the first five natural numbers raised to the power of 3:
+    ```python
+    cubed = [num ** 3 for num in range(5)]
+    print(cubed)  # outputs: [0, 1, 8, 27, 64]
+    ```
+2. You can use **nested lists** in Python to create **matrices** (i.e., two-dimensional lists). For example:
+    ```python
+    # A four-column/four-row table ‒ a two dimensional array (4x4)
+    
+    table = [[":(", ":)", ":(", ":)"],
+             [":)", ":(", ":)", ":)"],
+             [":(", ":)", ":)", ":("],
+             [":)", ":)", ":)", ":("]]
+    
+    print(table)
+    print(table[0][0])  # outputs: ':('
+    print(table[0][3])  # outputs: ':)'
+    ```
+<p align="center">
+    <img width="50%" height="50%" src="images/2_d.png">
+</p>
+
+3. You can nest as many lists in lists as you want, thereby creating n-dimensional lists, e.g., three-, four- or even sixty-four-dimensional arrays. For example:
+    ```python
+    # Cube - a three-dimensional array (3x3x3)
+    
+    cube = [[[':(', 'x', 'x'],
+             [':)', 'x', 'x'],
+             [':(', 'x', 'x']],
+    
+            [[':)', 'x', 'x'],
+             [':(', 'x', 'x'],
+             [':)', 'x', 'x']],
+    
+            [[':(', 'x', 'x'],
+             [':)', 'x', 'x'],
+             [':)', 'x', 'x']]]
+    
+    print(cube)
+    print(cube[0][0][0])  # outputs: ':('
+    print(cube[2][2][0])  # outputs: ':)'
+    ```
+
+<p align="center">
+    <img width="50%" height="50%" src="images/3_d.png">
+</p>
