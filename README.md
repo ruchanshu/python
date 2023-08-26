@@ -21,3 +21,4 @@ All study material of python
 18. [`return` Instruction](chapter_4/3_return_instruction.md)
 19. [Function and Scopes](chapter_4/4_functions_and_scopes.md)
 20. [Recursion](chapter_4/5_recursion.md)
+21. [Tuples and Dictionary](chapter_4/6_tuple_and_dictionary.md)
