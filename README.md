@@ -16,4 +16,4 @@ All study material of python
 13. [Loops](chapter_3/3_loops.md)
 14. [Computer logic](chapter_3/4_logical_n_bitwise_operator.md)
 15. [Lists](chapter_3/5_lists.md)
-16. [Lists in lists](chapter_3/6_multidimensional_lists.md)
+16. [Functions](chapter_4/1_functions.md)
