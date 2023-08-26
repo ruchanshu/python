@@ -18,5 +18,5 @@ All study material of python
 15. [Lists](chapter_3/5_lists.md)
 16. [Functions](chapter_4/1_functions.md)
 17. [Parameterized Functions](chapter_4/2_parameterized_functions.md)
-18. [`retrun` Instruction](chapter_4/3_return_instruction.md)
+18. [`return` Instruction](chapter_4/3_return_instruction.md)
 19. [Function and Scopes](chapter_4/4_functions_and_scopes.md)
