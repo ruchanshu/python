@@ -27,4 +27,4 @@ Python Essentials 1
 
 Python Essentials 2
 
-[Hitansh](Dhoriya)
+1. [Modules, Packages and PIP](level_2/chapter_1/1_modules_packages.md)
