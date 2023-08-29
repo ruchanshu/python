@@ -1,4 +1,4 @@
-# Modules, Packages and PIP
+# Modules
 
 ## What is a module?
 Computer code has a tendency to grow. Growing code is in fact a growing problem. A larger code always means tougher maintenance. Searching for bugs is always easier where the code is smaller (just as finding a mechanical breakage is simpler when the machinery is simpler and smaller).

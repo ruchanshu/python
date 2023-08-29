@@ -27,4 +27,6 @@ Python Essentials 1
 
 Python Essentials 2
 
-1. [Modules, Packages and PIP](level_2/chapter_1/1_modules_packages.md)
+1. [Modules](level_2/chapter_1/1_modules.md)
+2. [Standard Modules](level_2/chapter_1/2_standard_modules.md)
+3. [Packages](level_2/chapter_1/3_package.md)
