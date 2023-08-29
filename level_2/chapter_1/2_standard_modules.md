@@ -293,84 +293,41 @@ Linux-4.4.0-1-rpi2-armv7l-with-debian-9.0
 Linux-4.4.0-1-rpi2-armv7l-with-glibc2.9
 ```
 
-#### The machine function
-Sometimes, you may just want to know the generic name of the processor which runs your OS together with Python and your code - a function named `machine()` will tell you that. As previously, the function returns a string.
-
+### Other function
+1. Sometimes, you may just want to know the generic name of the processor which runs your OS together with Python and your code - a function named `machine()` will tell you that. As previously, the function returns a string.
+2. The `processor()` function returns a string filled with the real processor name (if possible).
+3. A function named `system()` returns the generic OS name as a string.
+4. The OS version is provided as a string by the `version()` function.
 ```python
-from platform import machine
+from platform import machine, processor, system, version
 
 print(machine())
-```
-**Intel x86 + Windows ® Vista (32 bit):**
-```
-x86
-```
-**Intel x86 + Gentoo Linux (64 bit):**
-```
-x86_64
-```
-**Raspberry PI2 + Raspbian Linux (32 bit):**
-```
-armv7l
-```
-#### The processor function
-The `processor()` function returns a string filled with the real processor name (if possible).
-```python
-from platform import processor
-
 print(processor())
-```
-**Intel x86 + Windows ® Vista (32 bit):**
-```
-x86
-```
-**Intel x86 + Gentoo Linux (64 bit):**
-```
-Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz
-```
-**Raspberry PI2 + Raspbian Linux (32 bit):**
-```
-armv7l
-```
-#### The system function
-A function named `system()` returns the generic OS name as a string.
-```python
-from platform import system
-
 print(system())
-```
-**Intel x86 + Windows ® Vista (32 bit):**
-```
-Windows
-```
-**Intel x86 + Gentoo Linux (64 bit):**
-```
-Linux
-```
-**Raspberry PI2 + Raspbian Linux (32 bit):**
-```
-Linux
-```
-#### The version function
-The OS version is provided as a string by the `version()` function.
-```python
-from platform import version
-
 print(version())
 ```
 **Intel x86 + Windows ® Vista (32 bit):**
 ```
+x86
+x86
+Windows
 6.0.6002
 ```
 **Intel x86 + Gentoo Linux (64 bit):**
 ```
+x86_64
+Intel(R) Core(TM) i3-2330M CPU @ 2.20GHz
+Linux
 #1 SMP PREEMPT Fri Jul 21 22:44:37 CEST 2017
 ```
 **Raspberry PI2 + Raspbian Linux (32 bit):**
 ```
+armv7l
+armv7l
+Linux
 #1 SMP Debian 4.4.6-1+rpi14 (2016-05-05)
 ```
-#### The python_implementation and the python_version_tuple functions
+### The python_implementation and the python_version_tuple functions
 If you need to know what version of Python is running your code, you can check it using a number of dedicated functions - here are two of them:
 - `python_implementation()` → returns a string denoting the Python implementation (expect `CPython` here, unless you decide to use any non-canonical Python branch)
 - `python_version_tuple()` → returns a three-element tuple filled with:
