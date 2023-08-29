@@ -65,4 +65,24 @@
 5. If you want convince Python that it should take into account a non-standard package's directory, its name needs to be inserted/appended into/to the import directory list stored in the `path` variable contained in the `sys` module.
 6. A Python file named `__init__.py` is implicitly run when a package containing it is subject to import, and is used to initialize a package and/or its sub-packages (if any). The file may be empty, but must not be absent.
 
-
+### Python Package Installer (PIP)
+1. A **repository** (or **repo** for short) designed to collect and share free Python code exists and works under the name **Python Package Index (PyPI)** although it's also likely that you come across a very niche name **The Cheese Shop**. The Shop's website is available at https://pypi.org/.
+2. To make use of The Cheese Shop the specialized tool has been created and its name is **pip** (**p**ip **i**nstalls **p**ackages while pip stands for... ok, don't mind). As pip may not be deployed as a part of standard Python installation, it is possible that you will need to install it manually. Pip is a console tool.
+3. To check pip's version one the following commands should be issued:
+   ```
+   pip --version
+   ```
+   or
+   ```
+   pip3 --version
+   ```
+   Check yourself which of these works for you in your OS' environment.
+4. List of main **pip** activities looks as follows:
+- `pip help operation` - shows brief pip's description;
+- `pip list` - shows list of currently installed packages;
+- `pip show package_name` - shows package_name info including package's dependencies;
+- `pip search anystring` - searches through PyPI directories in order to find packages which name contains anystring;
+- `pip install name` - installs name system-wide (expect problems when you don't have administrative rights);
+- `pip install --user name` - install name for you only; no other your platform's user will be able to use it;
+- `pip install -U name` - updates previously installed package;
+- `pip uninstall name` - uninstalls previously installed package;

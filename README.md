@@ -30,3 +30,4 @@ Python Essentials 2
 1. [Modules](level_2/chapter_1/1_modules.md)
 2. [Standard Modules](level_2/chapter_1/2_standard_modules.md)
 3. [Packages](level_2/chapter_1/3_package.md)
+4. [Python Package Installer (PIP)](level_2/chapter_1/4_pip.md)
