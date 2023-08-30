@@ -135,3 +135,40 @@
    - `min()` – finds the character with the minimal codepoint.
 
 6. The method named `index()` finds the index of a given substring inside the string.
+
+### String methods
+1. Some of the methods offered by strings are:
+- `capitalize()` – changes all string letters to capitals;
+- `center()` – centers the string inside the field of a known length;
+- `count()` – counts the occurrences of a given character;
+- `join()` – joins all items of a tuple/list into one string;
+- `lower()` – converts all the string's letters into lower-case letters;
+- `lstrip()` – removes the white characters from the beginning of the string;
+- `replace()` – replaces a given substring with another;
+- `rfind()` – finds a substring starting from the end of the string;
+- `rstrip()` – removes the trailing white spaces from the end of the string;
+- `split()` – splits the string into a substring using a given delimiter;
+- `strip()` – removes the leading and trailing white spaces;
+- `swapcase()` – swaps the letters' cases (lower to upper and vice versa)
+- `title()` – makes the first letter in each word upper-case;
+- `upper()` – converts all the string's letter into upper-case letters.
+
+2. String content can be determined using the following methods (all of them return Boolean values):
+- `endswith()` – does the string end with a given substring?
+- `isalnum()` – does the string consist only of letters and digits?
+- `isalpha()` – does the string consist only of letters?
+- `islower()` – does the string consists only of lower-case letters?
+- `isspace()` – does the string consists only of white spaces?
+- `isupper()` – does the string consists only of upper-case letters?
+- `startswith()` – does the string begin with a given substring?
+
+### String in action
+1. Strings can be compared to strings using general comparison operators, but comparing them to numbers gives no reasonable result, because **no string can be equal** to any number. For example:
+   - `string == number` is always `False`;
+   - `string != number` is always `True`;
+   - `string >= number` always **raises an exception**.
+2. Sorting lists of strings can be done by:
+   - a function named `sorted()`, creating a new, sorted list;
+   - a method named `sort()`, which sorts the _list in situ_
+3. A number can be converted to a string using the `str()` function.
+4. A string can be converted to a number (although not every string) using either the `int()` or `float()` function. The conversion fails if a string doesn't contain a valid number image (an exception is raised then).

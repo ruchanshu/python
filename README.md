@@ -33,3 +33,5 @@ Python Essentials 2
 4. [Python Package Installer (PIP)](level_2/chapter_1/4_pip.md)
 5. [Characters and Strings vs. Computers](level_2/chapter_1/5_characters_and_strings.md)
 6. [The nature of strings in Python](level_2/chapter_1/6_strings.md)
+7. [String Methods](level_2/chapter_1/7_string_methods.md)
+8. [String in Action](level_2/chapter_1/8_string_in_action.md)
