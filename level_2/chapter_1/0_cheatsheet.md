@@ -172,3 +172,15 @@
    - a method named `sort()`, which sorts the _list in situ_
 3. A number can be converted to a string using the `str()` function.
 4. A string can be converted to a number (although not every string) using either the `int()` or `float()` function. The conversion fails if a string doesn't contain a valid number image (an exception is raised then).
+
+### String Processing
+1. Strings are key tools in modern data processing, as most useful data are actually strings. For example, using a web search engine (which seems quite trivial these days) utilizes extremely complex and complicated string processing, involving unimaginable amounts of data.
+2. Comparing strings in a strict way (as Python does) can be very unsatisfactory when it comes to advanced searches (e.g. during extensive database queries). Responding to this demand, a number of _fuzzy_ string comparison algorithms has been created and implemented. These algorithms are able to find strings which aren't equal in the Python sense, but are **similar**.
+
+   One such concept is the **Hamming distance**, which is used to determine the similarity of two strings. If this problem interests you, you can find out more about it here: https://en.wikipedia.org/wiki/Hamming_distance. Another solution of the same kind, but based on a different assumption, is the **Levenshtein distance** described here: https://en.wikipedia.org/wiki/Levenshtein_distance.
+
+3. Another way of comparing strings is finding their _acoustic_ similarity, which means a process leading to determine if two strings sound similar (like "raise" and "race"). Such a similarity has to be established for every language (or even dialect) separately.
+
+   An algorithm used to perform such a comparison for the English language is called **Soundex** and was invented – you won't believe – in 1918. You can find out more about it here: https://en.wikipedia.org/wiki/Soundex.
+
+4. Due to limited native float and integer data precision, it's sometimes reasonable to store and process huge numeric values as strings. This is the technique Python uses when you force it to operate on an integer number consisting of a very large number of digits.
