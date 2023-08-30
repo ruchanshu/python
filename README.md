@@ -31,3 +31,5 @@ Python Essentials 2
 2. [Standard Modules](level_2/chapter_1/2_standard_modules.md)
 3. [Packages](level_2/chapter_1/3_package.md)
 4. [Python Package Installer (PIP)](level_2/chapter_1/4_pip.md)
+5. [Characters and Strings vs. Computers](level_2/chapter_1/5_characters_and_strings.md)
+6. [The nature of strings in Python](level_2/chapter_1/6_strings.md)
