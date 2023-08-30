@@ -86,3 +86,52 @@
 - `pip install --user name` - install name for you only; no other your platform's user will be able to use it;
 - `pip install -U name` - updates previously installed package;
 - `pip uninstall name` - uninstalls previously installed package;
+
+### Characters and Strings vs. Computers
+1. Computers store characters as numbers. There is more than one possible way of encoding characters, but only some of them gained worldwide popularity and are commonly used in IT: these are **ASCII** (used mainly to encode the Latin alphabet and some of its derivates) and **UNICODE** (able to encode virtually all alphabets being used by humans).
+2. A number corresponding to a particular character is called a **codepoint**.
+3. UNICODE uses different ways of encoding when it comes to storing the characters using files or computer memory: two of them are **UCS-4** and **UTF-8** (the latter is the most common as it wastes less memory space).
+
+### The nature of strings in Python
+1. Python strings are **immutable sequences** and can be indexed, sliced, and iterated like any other sequence, as well as being subject to the `in` and `not in` operators. There are two kinds of strings in Python:
+   - **one-line** strings, which cannot cross line boundaries – we denote them using either apostrophes (`'string'`) or quotes (`"string"`)
+   - **multi-line** strings, which occupy more than one line of source code, delimited by trigraphs:
+      ```python
+      '''
+      string
+      '''
+      ```
+      or
+      ```python
+      """
+      string
+      """
+      ```
+
+2. The length of a string is determined by the `len()` function. The escape character (`\`) is not counted. For example:
+   ```python
+   print(len("\n\n"))
+   ```
+   outputs `2`.
+
+3. Strings can be **concatenated** using the `+` operator, and **replicated** using the `*` operator. For example:
+   ```python
+   asterisk = '*'
+   plus = "+"
+   decoration = (asterisk + plus) * 4 + asterisk
+   print(decoration)
+   ```
+   outputs `*+*+*+*+*`.
+
+4. The pair of functions `chr()` and `ord()` can be used to create a character using its codepoint, and to determine a codepoint corresponding to a character. Both of the following expressions are always true:
+   ```python
+   chr(ord(character)) == character
+   ord(chr(codepoint)) == codepoint
+   ```
+
+5. Some other functions that can be applied to strings are:
+   - `list()` – create a list consisting of all the string's characters;
+   - `max()` – finds the character with the maximal codepoint;
+   - `min()` – finds the character with the minimal codepoint.
+
+6. The method named `index()` finds the index of a given substring inside the string.
