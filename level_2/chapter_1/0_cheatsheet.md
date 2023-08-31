@@ -184,3 +184,61 @@
    An algorithm used to perform such a comparison for the English language is called **Soundex** and was invented – you won't believe – in 1918. You can find out more about it here: https://en.wikipedia.org/wiki/Soundex.
 
 4. Due to limited native float and integer data precision, it's sometimes reasonable to store and process huge numeric values as strings. This is the technique Python uses when you force it to operate on an integer number consisting of a very large number of digits.
+
+### More on Exceptions
+1. An exception is an event during program execution caused by an abnormal situation. The exception should be handled to avoid the termination of the program. The part of your code that is suspected of being the source of the exception should be put inside the `try` branch.
+
+   - When the exception happens, the execution of the code is not terminated, but instead jumps into the `except` branch. This is the place where the handling of the exception should take place. The general scheme for such a construction looks as follows:
+   ```python
+   :
+   # The code that always runs smoothly.
+   :
+   try:
+       :
+       # Risky code.
+       :
+   except:
+       :
+       # Crisis management takes place here.
+       : 
+   :
+   # Back to normal.
+   :
+   ```
+2. If you need to handle more than one exception coming from the same `try` branch, you can add more than one `except` branch, but you have to label them with different exception names, like this:
+   ```python
+   :
+   # The code that always runs smoothly.
+   :
+   try:
+       :
+       # Risky code.
+       :
+   except Except_1:
+       # Crisis management takes place here.
+   except Except_2:
+       # We save the world here.
+   :
+   # Back to normal.
+   :
+   ```
+   At most, one of the `except` branches is executed – none of the branches is performed when the raised exception doesn't match any of the specified exceptions.
+3. You cannot add more than one anonymous (unnamed) `except` branch after the named ones.
+   ```python
+   :
+   # The code that always runs smoothly.
+   :
+   try:
+       :
+       # Risky code.
+       :
+   except Except_1:
+       # Crisis management takes place here.
+   except Except_2:
+       # We save the world here.
+   except:
+       # All other issues fall here.
+   :
+   # Back to normal.
+   :
+   ```

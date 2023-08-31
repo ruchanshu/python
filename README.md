@@ -35,3 +35,4 @@ Python Essentials 2
 6. [The nature of strings in Python](level_2/chapter_1/6_strings.md)
 7. [String Methods](level_2/chapter_1/7_string_methods.md)
 8. [String in Action](level_2/chapter_1/8_string_in_action.md)
+9. [Exceptions in more Detail](level_2/chapter_1/9_more_on_exceptions.md)
