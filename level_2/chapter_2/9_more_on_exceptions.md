@@ -308,7 +308,7 @@ Some of the built-in exceptions are more general (they include other exceptions)
 Take a look at the figure:
 
 <p align="center">
-  <img src="images/packages/exception_hierarchy.png">
+  <img src="images/exception_hierarchy.png">
 </p>
 
 It shows a small section of the complete exception tree. Let's begin examining the tree from the `ZeroDivisionError` leaf.
