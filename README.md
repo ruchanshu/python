@@ -36,3 +36,4 @@ Python Essentials 2
 7. [String Methods](level_2/chapter_2/3_string_methods.md)
 8. [String in Action](level_2/chapter_2/4_string_in_action.md)
 9. [Exceptions in more Detail](level_2/chapter_2/5_more_on_exceptions.md)
+10. [Introduction to OOPs](level_2/chapter_3/1_basic_concepts_oops.md)
