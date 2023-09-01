@@ -41,3 +41,4 @@ Python Essentials 2
 12. [Instance & Class Variables](level_2/chapter_3/3_properties.md)
 13. [Methods in detail](level_2/chapter_3/4_methods.md)
 14. [Inheritance](level_2/chapter_3/5_inheritance.md) 
+15. [More about exceptions](level_2/chapter_3/6_exception_again.md)
