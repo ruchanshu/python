@@ -38,3 +38,4 @@ Python Essentials 2
 9. [Exceptions in more Detail](level_2/chapter_2/5_more_on_exceptions.md)
 10. [Introduction to OOPs](level_2/chapter_3/1_basic_concepts_oops.md)
 11. [Create stack using Class](level_2/chapter_3/2_stack.md)
+12. [Instance & Class Variables](level_2/chapter_3/3_properties.md)
