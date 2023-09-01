@@ -39,3 +39,4 @@ Python Essentials 2
 10. [Introduction to OOPs](level_2/chapter_3/1_basic_concepts_oops.md)
 11. [Create stack using Class](level_2/chapter_3/2_stack.md)
 12. [Instance & Class Variables](level_2/chapter_3/3_properties.md)
+13. [Methods in detail](level_2/chapter_3/4_methods.md)
