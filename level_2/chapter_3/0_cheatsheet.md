@@ -32,6 +32,7 @@
 14. A **class variable** is a property which exists in exactly one copy, and doesn't need any created object to be accessible. Such variables are not shown as `__dict__` content.
 
    All a class's class variables are stored inside a dedicated dictionary named `__dict__`, contained in every class separately.
+
 15. A function named `hasattr()` can be used to determine if any object/class contains a specified property.
    For example:
    ```python
