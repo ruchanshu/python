@@ -24,5 +24,29 @@
 9. The part of the Python class responsible for creating new objects is called the **constructor**, and it's implemented as a method of the name `__init__`.
 10. Each class method declaration must contain at least one parameter (always the first one) usually referred to as `self`, and is used by the objects to identify themselves.
 11. If we want to hide any of a class's components from the outside world, we should start its name with `__`. Such components are called **private**.
+12. An **instance variable** is a property whose existence depends on the creation of an object. Every object can have a different set of instance variables.
 
+   Moreover, they can be freely added to and removed from objects during their lifetime. All object instance variables are stored inside a dedicated dictionary named `__dict__`, contained in every object separately.
+13. An instance variable can be private when its name starts with `__`, but don't forget that such a property is still accessible from outside the class using a **mangled name** constructed as `_ClassName__PrivatePropertyName`.
+14. A **class variable** is a property which exists in exactly one copy, and doesn't need any created object to be accessible. Such variables are not shown as `__dict__` content.
 
+   All a class's class variables are stored inside a dedicated dictionary named `__dict__`, contained in every class separately.
+15. A function named `hasattr()` can be used to determine if any object/class contains a specified property.
+
+   For example:
+   ```python
+   class Sample:
+       gamma = 0 # Class variable.
+       def __init__(self):
+           self.alpha = 1 # Instance variable.
+           self.__delta = 3 # Private instance variable.
+   
+   
+   obj = Sample()
+   obj.beta = 2  # Another instance variable (existing only inside the "obj" instance.)
+   print(obj.__dict__)
+   ```
+   The code outputs:
+   ```
+   {'alpha': 1, '_Sample__delta': 3, 'beta': 2}
+   ```
