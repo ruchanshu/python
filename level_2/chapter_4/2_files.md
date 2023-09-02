@@ -212,7 +212,7 @@ Finally, the successful opening of the file will set the current file position (
 | w+t        | w+b          | write and update |
 
 > [!IMPORTANT]
-> You can also open a file for its exclusive creation. You can do this using the `x` open mode. If the file already exists, the open() function will raise an exception.
+> You can also open a file for its exclusive creation. You can do this using the `x` open mode. If the **file already exists, the `open()` function will raise an exception**.
 
 ### Opening the stream for the first time
 Imagine that we want to develop a program that reads content of the text file named: C:\Users\User\Desktop\file.txt.
