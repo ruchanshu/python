@@ -43,3 +43,4 @@ Python Essentials 2
 14. [Inheritance](level_2/chapter_3/5_inheritance.md) 
 15. [More about exceptions](level_2/chapter_3/6_exception_again.md)
 16. [Generators and many more](level_2/chapter_4/1_generators.md)
+17. [Files](level_2/chapter_4/2_files.md)
