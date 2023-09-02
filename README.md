@@ -45,3 +45,4 @@ Python Essentials 2
 16. [Generators and many more](level_2/chapter_4/1_generators.md)
 17. [Files](level_2/chapter_4/2_files.md)
 18. [Processing files](level_2/chapter_4/3_processing_files.md)
+19. [Introduction to the os module](level_2/chapter_4/4_os_module.md)
