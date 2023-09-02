@@ -44,3 +44,4 @@ Python Essentials 2
 15. [More about exceptions](level_2/chapter_3/6_exception_again.md)
 16. [Generators and many more](level_2/chapter_4/1_generators.md)
 17. [Files](level_2/chapter_4/2_files.md)
+18. [Processing files](level_2/chapter_4/3_processing_files.md)
