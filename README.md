@@ -48,3 +48,8 @@ Python Essentials 2
 19. [Introduction to the os module](level_2/chapter_4/4_os_module.md)
 20. [Introduction to the datetime module](level_2/chapter_4/5_datetime_module.md)
 21. [Introduction to the calendar module](level_2/chapter_4/6_calendar_module.md)
+
+Advanced Perspective of Classes and Object-Oriented Programming
+1. [Introduction to Object-Oriented Programming](level_3/chapter_1/1_introduction_to_oops.md)
+2. [OOP Advanced](level_3/chapter_1/2_advanced_oops.md)
+3. [Extended function argument syntax](level_3/chapter_1/3_function_arguments.md)
