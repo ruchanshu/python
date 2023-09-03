@@ -47,3 +47,4 @@ Python Essentials 2
 18. [Processing files](level_2/chapter_4/3_processing_files.md)
 19. [Introduction to the os module](level_2/chapter_4/4_os_module.md)
 20. [Introduction to the datetime module](level_2/chapter_4/5_datetime_module.md)
+21. [Introduction to the calendar module](level_2/chapter_4/6_calendar_module.md)
