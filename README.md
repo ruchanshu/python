@@ -54,3 +54,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 2. [OOP Advanced](level_3/chapter_1/2_advanced_oops.md)
 3. [Extended function argument syntax](level_3/chapter_1/3_function_arguments.md)
 4. [Decorators](level_3/chapter_1/4_decorators.md)
+5. [Different faces of Python methods](level_3/chapter_1/5_types_of_methods.md)
