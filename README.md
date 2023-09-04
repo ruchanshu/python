@@ -53,3 +53,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 1. [Introduction to Object-Oriented Programming](level_3/chapter_1/1_introduction_to_oops.md)
 2. [OOP Advanced](level_3/chapter_1/2_advanced_oops.md)
 3. [Extended function argument syntax](level_3/chapter_1/3_function_arguments.md)
+4. [Decorators](level_3/chapter_1/4_decorators.md)
