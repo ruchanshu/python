@@ -55,3 +55,5 @@ Advanced Perspective of Classes and Object-Oriented Programming
 3. [Extended function argument syntax](level_3/chapter_1/3_function_arguments.md)
 4. [Decorators](level_3/chapter_1/4_decorators.md)
 5. [Different faces of Python methods](level_3/chapter_1/5_types_of_methods.md)
+6. [Abstract classes](level_3/chapter_1/6_abstract_classes.md)
+7. [Encapsulation](level_3/chapter_1/7_encapsulation.md)
