@@ -263,7 +263,7 @@ With classes equipped with custom special methods, the tasks may start to look s
 
 Of course, don’t forget to check the type of the objects passed as arguments to special methods. If someone uses your classes, they might use them incorrectly, so a good `__add__` method should check whether it’s possible to perform the addition before doing it, or else raise an exception.
 
-## Inheritance and 
+## Inheritance 
 ### Inheritance is a pillar of OOP
 Inheritance is one of the fundamental concepts of object oriented programming, and expresses the fundamental relationships between classes: superclasses (parents) and their subclasses (descendants). Inheritance creates a class hierarchy. Any object bound to a specific level of class hierarchy inherits all the traits (methods and attributes) defined inside any of the superclasses.
 
