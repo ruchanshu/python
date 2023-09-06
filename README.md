@@ -57,3 +57,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 5. [Different faces of Python methods](level_3/chapter_1/5_types_of_methods.md)
 6. [Abstract classes](level_3/chapter_1/6_abstract_classes.md)
 7. [Encapsulation](level_3/chapter_1/7_encapsulation.md)
+8. [Composition vs Inheritance](level_3/chapter_1/8_composition_vs_inheritance.md)
