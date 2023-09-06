@@ -58,3 +58,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 6. [Abstract classes](level_3/chapter_1/6_abstract_classes.md)
 7. [Encapsulation](level_3/chapter_1/7_encapsulation.md)
 8. [Composition vs Inheritance](level_3/chapter_1/8_composition_vs_inheritance.md)
+9. [Inheriting properties from built-in classes](level_3/chapter_1/9_built_in_classes.md)
