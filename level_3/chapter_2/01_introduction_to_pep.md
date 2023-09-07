@@ -10,7 +10,7 @@ In this course, you will learn about:
 PEP may refer to several things:
 
 <p align="center">
-  <img src="images/pep.png">
+  <img height="60%" width="60%" src="images/pep.png">
 </p>
 
 - football (soccer) fans will definitely associate it with the famous ex-footballer and football manager, Josep Guardiola, whose nickname is (guess what) Pep;
