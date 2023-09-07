@@ -62,3 +62,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 10. [Advanced Exceptions](level_3/chapter_1/10_advanced_exceptions.md)
 11. [Shallow and deep copy operations](level_3/chapter_1/11_shallow_n_deep_copy.md)
 12. [Serialization of Python objects](level_3/chapter_1/12_serialization.md)
+13. [Metaprogramming](level_3/chapter_1/13_metaprogramming.md)
