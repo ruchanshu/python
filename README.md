@@ -60,3 +60,5 @@ Advanced Perspective of Classes and Object-Oriented Programming
 8. [Composition vs Inheritance](level_3/chapter_1/08_composition_vs_inheritance.md)
 9. [Inheriting properties from built-in classes](level_3/chapter_1/09_built_in_classes.md)
 10. [Advanced Exceptions](level_3/chapter_1/10_advanced_exceptions.md)
+11. [Shallow and deep copy operations](level_3/chapter_1/11_shallow_n_deep_copy.md)
+12. [Serialization of Python objects](level_3/chapter_1/12_serialization.md)
