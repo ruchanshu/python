@@ -63,3 +63,6 @@ Advanced Perspective of Classes and Object-Oriented Programming
 11. [Shallow and deep copy operations](level_3/chapter_1/11_shallow_n_deep_copy.md)
 12. [Serialization of Python objects](level_3/chapter_1/12_serialization.md)
 13. [Metaprogramming](level_3/chapter_1/13_metaprogramming.md)
+
+Best Practices and Standardization (Python Enhancement Proposals)
+1. [PEP 1 – PEP Purpose and Guidelines](level_3/chapter_2/01_introduction_to_pep.md)
