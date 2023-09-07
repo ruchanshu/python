@@ -108,7 +108,7 @@ The result of the identity comparison: False
 This could be depicted as follows:
 
 <p align="center">
-  <img src="images/objects_vs_variables.png">
+  <img height="80%" width="80%" src="images/objects_vs_variables.png">
 </p>
 
 When you process the data, you’ll come to the point where you may want to have distinct copies of objects that you can modify without automatically modifying the original at the same time.
@@ -158,7 +158,7 @@ The explanation of the behavior presented on the previous page is:
 - as you can see, a shallow copy is only one level deep. The copying process does not recurse and therefore does not create copies of the child objects, but instead populates `b_list` with references to the already existing objects.
 
 <p align="center">
-  <img src="images/list.png">
+  <img height="70%" width="70%" src="images/list.png">
 </p>
 
 If you want to make an independent copy of a compound object (list, dictionary, custom class instance) you should make use of deep copy, which:
@@ -169,17 +169,140 @@ If you want to make an independent copy of a compound object (list, dictionary, 
 The general idea should be depicted like this:
 
 <p align="center">
-  <img src="images/shallow_deep.png">
+  <img height="70%" width="70%" src="images/shallow_deep.png">
 </p>
 
-A code creating an independent copy of the a_list object should look like the code presented in the right pane.
+A code creating an independent copy of the `a_list` object should look like the code presented below.
+```python
+import copy
 
+print("Let's make a deep copy")
+a_list = [10, "banana", [997, 123]]
+b_list = copy.deepcopy(a_list)
+print("a_list contents:", a_list)
+print("b_list contents:", b_list)
+print("Is it the same object?", a_list is b_list)
+
+print()
+print("Let's modify b_list[2]")
+b_list[2][0] = 112
+print("a_list contents:", a_list)
+print("b_list contents:", b_list)
+print("Is it the same object?", a_list is b_list)
+```
 The graphical representation should look like the following:
 
 <p align="center">
-  <img src="images/shallow_deep_list.png">
+  <img height="70%" width="70%" src="images/shallow_deep_list.png">
 </p>
 
-The 'copy' module contains a function for shallow copying: copy(). Of course, you could say that for copying lists there is already the [:] notation, or a_list=list(b_list), and for dictionaries you could use a_dict = dict(b_dict).
+The `copy` module contains a function for shallow copying: `copy()`. Of course, you could say that for copying lists there is already the `[:]` notation, or `a_list=list(b_list)`, and for dictionaries you could use `a_dict = dict(b_dict)`.
 
-But think about making use of polymorphism when you need a universal function to copy any type object, so that in that case using a copy() function is the smart way to accomplish the task.
+But think about making use of polymorphism when you need a universal function to copy any type object, so that in that case using a `copy()` function is the smart way to accomplish the task.
+
+In the following example, we'll compare the performance of three ways of copying a large compound object (a million three-element tuples).
+```python
+import copy
+import time
+
+a_list = [(1,2,3) for x in range(1_000_000)]
+
+print('Single reference copy')
+time_start = time.time()
+b_list = a_list
+print('Execution time:', round(time.time() - time_start, 3))
+print('Memory chunks:', id(a_list), id(b_list))
+print('Same memory chunk?', a_list is b_list)
+
+print()
+
+print('Shallow copy')
+time_start = time.time()
+b_list = a_list[:]
+print('Execution time:', round(time.time() - time_start, 3))
+print('Memory chunks:', id(a_list), id(b_list))
+print('Same memory chunk?', a_list is b_list)
+
+print()
+
+print('Deep copy')
+time_start = time.time()
+b_list = copy.deepcopy(a_list)
+print('Execution time:', round(time.time() - time_start, 3))
+print('Memory chunks:', id(a_list), id(b_list))
+print('Same memory chunk?', a_list is b_list)
+```
+- The first approach is a simple reference copy. This is done very quickly, as there’s nearly nothing to be done by the CPU – just a copy of a reference to `a_list`.
+- The second approach is a shallow copy. This is slower than the previous code, as there are 1,000,000 references (not objects) created.
+- The third approach is a deep copy. This is the most comprehensive operation, as there are 3,000,000 objects created.
+
+
+The same `deepcopy()` method could be utilized when you want to copy dictionaries or custom class objects.
+
+The code on the right presents the code that safely copies the dictionary.
+```python
+import copy
+
+a_dict = {
+    'first name': 'James',
+    'last name': 'Bond',
+    'movies': ['Goldfinger (1964)', 'You Only Live Twice']
+    }
+b_dict = copy.deepcopy(a_dict)
+print('Memory chunks:', id(a_dict), id(b_dict))
+print('Same memory chunk?', a_dict is b_dict)
+print("Let's modify the movies list")
+a_dict['movies'].append('Diamonds Are Forever (1971)')
+print('a_dict movies:', a_dict['movies'])
+print('b_dict movies:', b_dict['movies'])
+```
+Run the code to get the following output:
+```
+Memory chunks: 30996264 44045800
+Same memory chunk? False
+Let's modify the movies list
+a_dict movies: ['Goldfinger (1964)', 'You Only Live Twice', 'Diamonds Are Forever (1971)']
+b_dict movies: ['Goldfinger (1964)', 'You Only Live Twice']
+```
+
+The code in the editor copies the dictionary in a safe manner.
+```python
+import copy
+
+class Example:
+    def __init__(self):
+        self.properties = ["112", "997"]
+        print("Hello from __init__()")
+
+a_example = Example()
+b_example = copy.deepcopy(a_example)
+print("Memory chunks:", id(a_example), id(b_example))
+print("Same memory chunk?", a_example is b_example)
+print()
+print("Let's modify the movies list")
+b_example.properties.append("911")
+print('a_example.properties:', a_example.properties)
+print('b_example.properties:', b_example.properties)
+```
+Run it to get the following output:
+```
+Deep copy
+Hello from __init__()
+Memory chunks: 43986504 43986696
+Same memory chunk? False
+
+Let's modify the movies list
+a_example.properties: ['112', '997']
+b_example.properties: ['112', '997', '911']
+```
+Pay attention to the fact that the `__init__()` method is executed only once, despite the fact we own two instances of the example class.
+
+This method is not executed for the `b_example` object as the deepcopy function copies an already initialized object.
+
+### Section summary
+Important things to remember:
+- the `deepcopy()` method creates and persists new instances of source objects, whereas any shallow copy operation only stores references to the original memory address;
+- a deep copy operation takes significantly more time than any shallow copy operation;
+- the `deepcopy()` method copies the whole object, including all nested objects; it’s an example of practical recursion taking place;
+- deep copy might cause problems when there are cyclic references in the structure to be copied.
+
