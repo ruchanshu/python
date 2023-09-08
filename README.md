@@ -66,3 +66,4 @@ Advanced Perspective of Classes and Object-Oriented Programming
 
 Best Practices and Standardization (Python Enhancement Proposals)
 1. [PEP 1 – PEP Purpose and Guidelines](level_3/chapter_2/01_introduction_to_pep.md)
+2. [PEP 20 – The Zen of Python](level_3/chapter_2/02_zen_of_python.md)
