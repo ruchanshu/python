@@ -69,3 +69,7 @@ Best Practices and Standardization (Python Enhancement Proposals)
 2. [PEP 20 – The Zen of Python](level_3/chapter_2/02_zen_of_python.md)
 3. [PEP 8 – Best Practices and Conventions](level_3/chapter_2/03_pep_8.md)
 4. [PEP 257 – Docstring Conventions, Documentation, Type Hinting, and Linters](level_3/chapter_2/04_pep_257_n_484.md)
+
+Introduction to GUI Programming in Python (TkInter)
+1. [GUI Programming](level_3/chapter_3/01_gui_programming.md)
+2. [Let TkInter speak!](level_3/chapter_3/02_tk_inter.md)
