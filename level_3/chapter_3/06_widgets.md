@@ -1,4 +1,4 @@
-# Visiting widgets’ properties
+# Visiting widgets’ properties and methods
 
 ## Widget properties
 As you already know, every widget has a set of properties, and the widget’s user is able to change them by modifying the widget’s appearance and behavior. We’ll show you how to manipulate properties and present a basic set of the most usable widget properties.
