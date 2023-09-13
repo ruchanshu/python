@@ -313,11 +313,11 @@ lfrm = LabelFrame(master, option, ...)
 ```
 Some of the usable `LabelFrame` properties are gathered here:
 
-| LabelFrame property | Property meaning                                                                                                                                                           |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `takefocus`         | the same as for the `Frame`                                                                                                                                                |
-| `text`              | the `LabelFrame`’s title                                                                                                                                                   |
-| `labelanchor`       | the **title’s location**, defined as a string containing a quasi-compass coordinate (as shown by the image) </br> <p align="center"><img src="images/label_frame.png"></p> |
+| LabelFrame property | Property meaning                                                                                                                                                                                    |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `takefocus`         | the same as for the `Frame`                                                                                                                                                                         |
+| `text`              | the `LabelFrame`’s title                                                                                                                                                                            |
+| `labelanchor`       | the **title’s location**, defined as a string containing a quasi-compass coordinate (as shown by the image) </br> <p align="center"><img width="80%" height="80%" src="images/label_frame.png"></p> |
 
 We’ve rebuilt our previous example to employ a `LabelFrame` instead of a `Label` – look at the updated code we've provided in the editor.
 ```python
