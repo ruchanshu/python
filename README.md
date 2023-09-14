@@ -81,3 +81,6 @@ Introduction to GUI Programming in Python (TkInter)
 8. [A small lexicon of widgets](level_3/chapter_3/08_lexicon_of_widgets.md)
 9. [Shaping the main window and conversing with the user](level_3/chapter_3/09_conversing_with_user.md)
 10. [Working with the Canvas](level_3/chapter_3/10_canvas.md)
+
+Working with RESTful APIs
+1. [Basic Concepts of Network Programming](level_3/chapter_4/01_network_programming.md)
