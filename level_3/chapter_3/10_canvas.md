@@ -166,11 +166,11 @@ The method draws the arc of an ellipse inscribed inside a rectangle with vertice
 
 The options are the same as for `create_polygon()`, and define a set of three new ones, specific to the method:
 
-| Option name | Option meaning                                                                                                                                                                               |
-|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `style`     | can be set to one of the following: `PIESLICE` (default), `CHORD` and `ARC`; the **shape** of the resulting drawing is presented here:</br><p align="center"><img src="images/arc.png"></p>  |
-| `start`     | the **angle** (in degrees) of the arc’s start relative to the X-axis (e.g., 90 means the highest point of the ellipse, while 0 is the right-most point. The default is 0)                    |
-| `extent`    | the **arc**’s span (in degrees) relative to the start point; note: the span is calculated counter-clockwise. The default is 90 (a quarter of an ellipse)                                     |
+| Option name | Option meaning                                                                                                                                                                                                       |
+|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `style`     | can be set to one of the following: `PIESLICE` (default), `CHORD` and `ARC`; the **shape** of the resulting drawing is presented here:</br><p align="center"><img width="50%" height="50%" src="images/arc.png"></p> |
+| `start`     | the **angle** (in degrees) of the arc’s start relative to the X-axis (e.g., 90 means the highest point of the ellipse, while 0 is the right-most point. The default is 0)                                            |
+| `extent`    | the **arc**’s span (in degrees) relative to the start point; note: the span is calculated counter-clockwise. The default is 90 (a quarter of an ellipse)                                                             |
 
 Take a look at the code in the editor, this is how we’ve done it. Try to imagine what it looks like!
 ```python
