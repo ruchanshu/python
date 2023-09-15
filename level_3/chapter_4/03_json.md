@@ -42,7 +42,7 @@ Yes, we can, but it won't be JSON. If you want your data to be widely understood
 Let’s start with a very simple example. We want to build a message encapsulating an object containing just one property named prop along with its real (floating-point) value of `2.78`.
 
 This is how JSON comes to this:
-```json
+```
 { "prop": 2.78 }
 ```
 Simple? Absolutely!
@@ -52,7 +52,7 @@ Now we’re ready to go deeper. Let us show you how JSON represents values of co
 Note: our presentation is rather comprehensive. If you need more details, refer to the original JSON documentation available here: http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf.
 
 If you want to encode an integer value (e.g., 123) you will specify this in the following way:
-```json
+```
 123
 ```
 Looks familiar, doesn't it? Don’t get carried away just yet. JSON's integer literals use **some different tricks** to those of Python. In general, you may expect no surprises when you use regular decimal integers, but keep in mind that **JSON knows nothing about numbers written using radices different to 10**, so literals like these:
@@ -65,19 +65,19 @@ won't be recognized in the JSON environment. Feel free to use a minus sign to pu
 **Real numbers** in JSON are the same as in Python, including utilization of scientific notation.
 
 Here’s an example:
-```json
+```
 3.141592653589
 3.0857E16
 −1.6021766208E−19
 ```
 JSON **strings** may look familiar, but there is one important difference – **you must not use apostrophes** to delimit the text. The only delimiter allowed is a quote, like here:
-```json
+```
 "Python"
 ```
 This means that you can’t just insert a quote inside the string – you have to use our old friend backslash (`\ `) followed by a quote instead.
 
 Nothing exciting – but we’re used to that:
-```json
+```
 "\"Monty Python's\""
 ```
 Just like in Python, there are some more digraphs and moregraphs (we’re joking, don’t let us confuse you) starting with \ in JSON. We’ve collected all of them here:
@@ -93,7 +93,7 @@ The `\u` (or `\U`) digraph starts a hexadecimal UNICODE code point and must cont
 Don't forget that JSON strings **cannot be split over multiple lines** – each string must fit entirely on one line (of course, there may be more than one string on the same line).
 
 **Boolean values** are represented (like in Python) by two specific identifiers (the literal name tokens): **true** and **false**:
-```json
+```
 true
 false
 ```
@@ -102,7 +102,7 @@ Note: you have to **preserve the case of the literals**, as this is the only acc
 There is one more literal name token in JSON, whose meaning is similar to the one known in Python as `None` – it may be used to represent no value, or a value without any meaning.
 
 It is called `null` in JSON:
-```json
+```
 null
 ```
 
@@ -113,15 +113,15 @@ In JSON, all the above values may be combined (or packed) in two ways:
 It should be noted that both ways can recursively incorporate any of the two, e.g., a list may contain an object which contains an object which contains a list and so on.
 
 Any JSON object property may contain (or carry) an array. The syntax JSON uses to encode arrays is very similar to the one used by Python to describe lists. For example, it uses square brackets (or just brackets) to delimit array content and uses commas to separate an array's elements – just like here:
-```json
+```
 [1, 2, 3]
 ```
 An **empty array** is denoted simply as a pair of brackets – just like in Python:
-```json
+```
 [ ]
 ```
 Contrary to an array, a JSON object is a set of property specifications surrounded by a pair of braces (curly brackets) – just like here – we’ve marked them in red:
-```json
+```
 { "prop": 2.78 }
 ```
 The property specification is a `name:value` pair with a colon as a separator where the name must be **enclosed in quotes**.
@@ -135,25 +135,25 @@ One important (and very surprising) thing should be stated here. There are **no 
 This doesn't mean that you have to use weird property names. We suggest you don’t do that at all. It only means that the property name's semantic isn't a part of the JSON standard. In other words, JSON is semantically blind when it comes to property names. It's none of its business how you name your properties.
 
 If you want to express the fact that a particular **object is empty**, you need to leave the braces and ensure that there is no content between them – just like here:
-```json
+```
 { }
 ```
 When there is more than one property in an object, you can specify all of them in **any order** using commas to separate the items from each other. As JSON ignores white spaces (including tabs) which aren't a part of strings, you can format (or unformat) the text in any way.
 
 For example, both these JSON objects are the same:
-```json
+```
 { 
 x: 123,
 y: -1
 }
 ```
-```json
+```
 {x:123, y:-1}
 ```
 The first is easier to read (for humans), while the second is cheaper to transmit (it occupies fewer bytes).
 
 Of course, you may incorporate **different types** of data inside one object:
-```json
+```
 	{ me: "Python",
 	pi: 3.141592653589,
 	parsec: 3.0857E16, 
@@ -166,7 +166,7 @@ Of course, you may incorporate **different types** of data inside one object:
 Any of the previously described elements can be put **inside an array**, and this rule may be applied recursively, which means that an array can contain another array which may contain another complete object, and so on.
 
 The example shows a very specific and not very practical, but completely correct, compound:
-```json
+```
 {ob:{ar:["a", 1, 3.14, false]}}
 ```
 The JSON object contains another object named `ob`, which consists of one property, which is an array.
