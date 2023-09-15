@@ -84,3 +84,4 @@ Introduction to GUI Programming in Python (TkInter)
 
 Working with RESTful APIs
 1. [Basic Concepts of Network Programming](level_3/chapter_4/01_network_programming.md)
+2. [How to use sockets in Python](level_3/chapter_4/02_sockets.md)
