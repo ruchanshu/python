@@ -87,3 +87,4 @@ Working with RESTful APIs
 2. [How to use sockets in Python](level_3/chapter_4/02_sockets.md)
 3. [JSON – our new friend](level_3/chapter_4/03_json.md)
 4. [What is XML and why do we prefer to use JSON?](level_3/chapter_4/04_xml.md)
+5. [Making life easier with the `requests` module](level_3/chapter_4/05_requests.md)
