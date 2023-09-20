@@ -249,7 +249,7 @@ app = Todo()
 app.add_task()
 ```
 
-sqlite3 – reading data (part 1)
+### sqlite3 – reading data
 So far, we haven't displayed any information on the screen about the inserted tasks. It's time to change that. Let's see what’s in our database. We’ll first need the appropriate SQL statement, named `SELECT`.
 
 The `SELECT` statement allows you to read data from one or more tables. Its syntax looks like this:
