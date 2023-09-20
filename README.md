@@ -91,5 +91,5 @@ Working with RESTful APIs
 6. [CRUD - How to build a simple REST client?](level_3/chapter_4/06_crud.md)
 
 File Processing
-1. [SQLite - What is a database?](level_3/chapter_5/01_SQLite.md)
+1. [SQLite - What is a database?](level_3/chapter_5/01_sqlite.md)
 2. [XML processing in Python](level_3/chapter_5/02_xml_processing.md)
