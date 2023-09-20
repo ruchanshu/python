@@ -94,3 +94,5 @@ File Processing
 1. [SQLite - What is a database?](level_3/chapter_5/01_sqlite.md)
 2. [XML processing in Python](level_3/chapter_5/02_xml_processing.md)
 3. [The CSV module in Python](level_3/chapter_5/03_csv_processing.md)
+4. [Logging in Python](level_3/chapter_5/04_logging.md)
+5. [The `configparser` module](level_3/chapter_5/05_configparser.md)
