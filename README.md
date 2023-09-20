@@ -93,3 +93,4 @@ Working with RESTful APIs
 File Processing
 1. [SQLite - What is a database?](level_3/chapter_5/01_sqlite.md)
 2. [XML processing in Python](level_3/chapter_5/02_xml_processing.md)
+3. [The CSV module in Python](level_3/chapter_5/03_csv_processing.md)
